@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Song {
 
@@ -7,6 +8,8 @@ public class Song {
 
     public SongTimings timings;
     public SongLyrics lyrics;
+    public List<int> blanks;
+    public List<string> blankChars;
     public AudioClip battleClip;
     public AudioClip beatClip;
 

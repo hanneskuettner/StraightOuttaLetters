@@ -8,13 +8,13 @@ using System.IO;
 [XmlRoot("song")]
 public class SongTimings {
 
-    public string Name;
+    public string name;
     public float length;
 
     [XmlArray("times"), XmlArrayItem("time")]
-    List<float> times;
+    public List<float> times;
 
-    private string name;
+    private string filename;
 
     public static SongTimings Load(string name)
     {
@@ -26,7 +26,7 @@ public class SongTimings {
         XmlSerializer serializer = new XmlSerializer(typeof(SongTimings));
         SongTimings song = serializer.Deserialize(reader) as SongTimings;
 
-        song.Name = name;
+        song.filename = name;
 
         return song;
     }
@@ -35,7 +35,7 @@ public class SongTimings {
     {
         XmlSerializer serializer = new XmlSerializer(typeof(SongTimings));
 
-        FileStream stream = new FileStream("Assets/resources/songs/" + this.name + "/timings.xml", FileMode.OpenOrCreate);
+        FileStream stream = new FileStream("Assets/resources/songs/" + this.filename + "/timings.xml", FileMode.OpenOrCreate);
 
         times.Sort();
 

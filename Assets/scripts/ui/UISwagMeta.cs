@@ -20,8 +20,6 @@ public class UISwagMeta : MonoBehaviour {
 
     private float width;
 
-    private float deleteme = 2f;
-
 
     // Use this for initialization
     public void Start()
@@ -33,22 +31,6 @@ public class UISwagMeta : MonoBehaviour {
     // Update is called once per frame
     public void Update()
     {
-        this.deleteme -= Time.deltaTime;
-        if (this.deleteme < 0f)
-        {
-            this.deleteme = 5f;
-            if (Random.Range(0,2) == 0)
-            {
-                this.AddPlayerScore(Random.Range(10f, 200f));
-                //Debug.Log("player score");
-            }
-            else
-            {
-                this.AddEnemyScore(Random.Range(10f, 200f));
-                //Debug.Log("enemy score");
-            }
-            //Debug.Log("p " + this.playerScore + "      e " + this.enemyScore);
-        }
 
 
         this.updateScores();
