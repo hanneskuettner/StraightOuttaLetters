@@ -34,7 +34,7 @@ public class SongTimings {
     {
         XmlSerializer serializer = new XmlSerializer(typeof(WordDictionary));
 
-        FileStream stream = new FileStream("Assets/Resources/songs/" + this.filename + ".xml", FileMode.OpenOrCreate);
+        FileStream stream = new FileStream("Assets/resources/songs/" + this.filename + ".xml", FileMode.OpenOrCreate);
 
         times.Sort();
 

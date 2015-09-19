@@ -37,7 +37,7 @@ public class WordDictionary {
     public void Save() {
 	    XmlSerializer serializer = new XmlSerializer (typeof(WordDictionary));
 
-	    FileStream stream = new FileStream ("Assets/Resources/" + this.filename + ".xml", FileMode.OpenOrCreate);
+	    FileStream stream = new FileStream ("Assets/resources/" + this.filename + ".xml", FileMode.OpenOrCreate);
 
 	    words.Sort();
 	    foreach (Word w in words) {
