@@ -8,10 +8,12 @@ public class WordController : MonoBehaviour {
     private GameController gameController;
 
     public GameObject WordSelectorPrefab;
-    public GameObject ButtonLayout;
+    private GameObject ButtonLayout;
+    private List<GameObject> buttons = new List<GameObject>();
 
     public void Validate(string word) {
         gameController.PutWord(word);
+        NukeButtons();
     }
 
     public void SpawnButtons(List<string> words) {
@@ -21,6 +23,14 @@ public class WordController : MonoBehaviour {
             g.GetComponentInChildren<Text>().text = s;
             g.transform.SetParent(ButtonLayout.transform);
             g.GetComponent<Button>().onClick.AddListener(delegate { Validate(g.GetComponentInChildren<Text>().text); });
+            buttons.Add(g);
+        }
+    }
+
+    private void NukeButtons() {
+        foreach (GameObject g in buttons)
+        {
+            Destroy(g);
         }
     }
 
