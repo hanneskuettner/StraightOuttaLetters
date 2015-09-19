@@ -17,6 +17,7 @@ public class WordController : MonoBehaviour {
     }
 
     public void SpawnButtons(List<string> words) {
+        Shuffle(ref words);
         foreach (string s in words)
         {
             GameObject g = Instantiate(WordSelectorPrefab) as GameObject;
@@ -27,11 +28,26 @@ public class WordController : MonoBehaviour {
         }
     }
 
+    private void Shuffle(ref List<string> list)
+    {
+        System.Random rng = new System.Random();
+        int n = list.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            string value = list[k];
+            list[k] = list[n];
+            list[n] = value;
+        }
+    }
+
     private void NukeButtons() {
         foreach (GameObject g in buttons)
         {
-            Destroy(g);
+            Destroy(g);            
         }
+        buttons.Clear();
     }
 
 	// Use this for initialization
