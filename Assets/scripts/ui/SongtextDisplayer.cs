@@ -1,51 +1,46 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
+using System;
 
 public class SongtextDisplayer : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-        text = SongTextObject.GetComponent<Text>();
-	}
+    public Text playerText;
+    public Text playerGrayText;
+    public Text opponentText;
+    public Text opponentGrayText;
 
-    public string[] songLines;
-    public float currentTime;
-    public int currentBars = 0;
-    public int CurrentLine;
-    public int bpm = 90;
-    public AudioSource audioSource;
-    public GameObject SongTextObject;
-    private Text text;
+    public void Start () {
+    
+    }
 
-
-	// Update is called once per frame
-	void Update () {
-        if (audioSource.isPlaying)
+    public void SetLines(List<SongLyrics.Line> lines) {
+        playerText.text = "";
+        playerGrayText.text = "";
+        opponentText.text = "";
+        opponentGrayText.text = "";
+        foreach (SongLyrics.Line line in lines)
         {
-            currentTime = audioSource.time / 60;
-            currentBars = CalculateCurrentBar(currentTime);
-            if (currentBars - 1 % 2 == 0)
-                OnBarsDone();
+            string playerString = "";
+            string opponentString = "";
+            foreach (SongLyrics.Lyric lyric in line.lyrics)
+            {
+                if (lyric.GetType() == typeof(SongLyrics.Player))
+                {
+                    playerString += lyric.lyric + " ";
+                    opponentString += new String(' ', lyric.lyric.Length + 1);
+                }
+                else
+                {
+                    opponentString += lyric.lyric + " ";
+                    playerString += new String(' ', lyric.lyric.Length + 1);
+                }
+            }
+            playerText.text += playerString + "\n";
+            playerGrayText.text += opponentString + "\n";
+            opponentText.text += opponentString + "\n";
+            opponentGrayText.text += playerString + "\n";
         }
-	}
-
-    public int CalculateCurrentBar(float time) {
-        float totalBeats = bpm / time;
-        return Mathf.FloorToInt(totalBeats/4);
-    }
-
-    public void OnBarsDone() { 
-        if (CurrentLine > 0 || CurrentLine < songLines.Length - 1)
-            text.text = songLines[CurrentLine - 1] + "\n" + songLines[CurrentLine] + "\n" + songLines[CurrentLine + 1];
-        else if (CurrentLine == 0)
-            text.text = songLines[CurrentLine] + "\n" + songLines[CurrentLine + 1];
-        else
-            text.text = songLines[CurrentLine - 1] + "\n" + songLines[CurrentLine];
-    }
-
-    public string MakeLine(int start, int end, string replacement, string line) { 
-        var tmp = line.Substring(start, end - start);
-        return line.Replace(tmp, replacement);
     }
 }
