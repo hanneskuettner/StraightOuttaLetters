@@ -1,9 +1,59 @@
 <dict>
 	<words>
-		<word original="This">
+		<word original="a">
 			<alts>
-				<alt>Piss</alt>
-				<alt>Kiss</alt>
+				<alt>e</alt>
+				<alt>i</alt>
+				<alt>o</alt>
+			</alts>
+		</word>
+		<word original="b">
+			<alts>
+				<alt>p</alt>
+				<alt>d</alt>
+				<alt>l</alt>
+			</alts>
+		</word>
+		<word original="c">
+			<alts>
+				<alt>z</alt>
+				<alt>g</alt>
+				<alt>j</alt>
+			</alts>
+		</word>
+		<word original="d">
+			<alts>
+				<alt>t</alt>
+				<alt>r</alt>
+				<alt>g</alt>
+			</alts>
+		</word>
+		<word original="e">
+			<alts>
+				<alt>a</alt>
+				<alt>i</alt>
+				<alt>d</alt>
+			</alts>
+		</word>
+		<word original="f">
+			<alts>
+				<alt>h</alt>
+				<alt>v</alt>
+				<alt>w</alt>
+			</alts>
+		</word>
+		<word original="g">
+			<alts>
+				<alt>j</alt>
+				<alt>k</alt>
+				<alt>r</alt>
+			</alts>
+		</word>
+		<word original="h">
+			<alts>
+				<alt>t</alt>
+				<alt>p</alt>
+				<alt>b</alt>
 			</alts>
 		</word>
 	</words>
