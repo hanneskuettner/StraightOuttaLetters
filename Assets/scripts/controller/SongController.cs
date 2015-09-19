@@ -21,7 +21,6 @@ public class SongController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    
 	}
 
     public void StartAudio() {
@@ -37,14 +36,14 @@ public class SongController : MonoBehaviour {
     }
 
     public void ChangeAudioHearable() {
-        if (sourceBattle.mute)
+        if (sourceBeat.mute)
         {
-            sourceBattle.mute = false;
-            sourceBeat.mute = true;
+            sourceBattle.Pause();
+            sourceBeat.mute = false;
         }
         else {
-            sourceBeat.mute = false;
-            sourceBattle.mute = true;
+            sourceBeat.mute = true;
+            sourceBattle.Play();
         }
     }
 }

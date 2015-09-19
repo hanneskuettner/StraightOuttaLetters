@@ -16,8 +16,8 @@ public class Song {
         song.timings = SongTimings.Load(name);
         song.lyrics = SongLyrics.Load(name);
         
-        song.battleClip = Resources.Load<AudioClip>("music/" + name + "/beat.ogg");
-        song.beatClip = Resources.Load<AudioClip>("music/" + name + "/battle.ogg");
+        song.battleClip = Resources.Load<AudioClip>("music/" + name + "/battle");
+        song.beatClip = Resources.Load<AudioClip>("music/" + name + "/beat");
 
         return song;
     }
