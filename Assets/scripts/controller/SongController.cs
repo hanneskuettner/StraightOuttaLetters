@@ -6,6 +6,8 @@ public class SongController : MonoBehaviour {
     private AudioSource sourceBattle;
     private AudioSource sourceBeat;
 
+    public Animation playerAnimator;
+
     private int bpm = 128;
 
 
@@ -44,7 +46,7 @@ public class SongController : MonoBehaviour {
         sourceBattle.mute = false;
         sourceBeat.Play();
         sourceBattle.Play();
-        beatTime = 60.0 / bpm / 2.0;
+        beatTime = 60.0 / bpm;
         currentTime = 0;
         nextBeatTime = 0;
     }
@@ -74,7 +76,7 @@ public class SongController : MonoBehaviour {
             if (currentTime > nextBeatTime)
             {
                 nextBeatTime += beatTime;
-                //animator.OnBeat();
+                playerAnimator.Play();
             }
         }
     }

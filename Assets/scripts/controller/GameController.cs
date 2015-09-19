@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour {
     private SongtextDisplayer songTextDisplayer;
     private SongController songController;
     private UIFlow flowMeta;
+    private UIScore scoreScreen;
     private Song song;
     private int currentLine;
     private int currentChar;
@@ -29,6 +30,7 @@ public class GameController : MonoBehaviour {
         songController = FindObjectOfType<SongController>();
         wordController = GetComponent<WordController>();
         flowMeta = FindObjectOfType<UIFlow>();
+        scoreScreen = FindObjectOfType<UIScore>();
 
         songController.SetCurrentSong(song);
 
@@ -174,7 +176,8 @@ public class GameController : MonoBehaviour {
 
     private void AddScore(float score)
     {
-
+        this.score += score;
+        scoreScreen.SetPlayerScore((int)this.score);
     }
 
     public void SkipBlanks()
@@ -230,6 +233,7 @@ public class GameController : MonoBehaviour {
     public void PutWord(string word) {
         if (word == song.blankChars[currentBlank])
         {
+            AddScore(CalculateScore(true));
             if (currentTimer <= 2)
             {
                 IncreaseMultiplier();
@@ -238,12 +242,13 @@ public class GameController : MonoBehaviour {
             {
                 DecreaseMultiplier();
             }
-            AddScore(CalculateScore(true));
+            songTextDisplayer.SetGreen(currentChar, currentBlank, song.blankChars[currentBlank]);
         }
         else
         {
             ResetMultiplier();
             AddScore(CalculateScore(true));
+            songTextDisplayer.SetRed(currentChar, currentBlank, song.blankChars[currentBlank]);
         }
 
         if (!BlankInLine())

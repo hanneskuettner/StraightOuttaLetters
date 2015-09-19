@@ -9,6 +9,8 @@ public class SongtextDisplayer : MonoBehaviour {
 
     public Text playerText;
     public Text playerGrayText;
+    public Text playerRedText;
+    public Text playerGreenText;
     public Text opponentText;
     public Text opponentGrayText;
     public Image arrow;
@@ -34,6 +36,8 @@ public class SongtextDisplayer : MonoBehaviour {
         this.lines = lines;
         playerText.text = "";
         playerGrayText.text = "";
+        playerRedText.text = "";
+        playerGreenText.text = "";
         opponentText.text = "";
         opponentGrayText.text = "";
 
@@ -82,5 +86,34 @@ public class SongtextDisplayer : MonoBehaviour {
         }
         arrow.gameObject.SetActive(true);
         arrow.rectTransform.localPosition = new Vector3((blanks[currentBlank] - currentChar) * characterSize + characterSize - 312.5f, arrow.rectTransform.localPosition.y);
+
+
+        for (int i = playerGreenText.text.Length; i < blanks[currentBlank] - currentChar; i++)
+        {
+            playerGreenText.text += " ";
+        }
+        for (int i = playerRedText.text.Length; i < blanks[currentBlank] - currentChar; i++)
+        {
+            playerRedText.text += " ";
+        }
+    }
+
+    public void SetGreen(int currentChar, int currentBlank, string w)
+    {
+        Debug.Log(playerGreenText.text.Length);
+        Debug.Log(blanks[currentBlank] - currentChar);
+        for (int i = playerGreenText.text.Length; i < blanks[currentBlank] - currentChar; i++)
+        {
+            playerGreenText.text += " ";
+        }
+        playerGreenText.text += w;
+    }
+    public void SetRed(int currentChar, int currentBlank, string w)
+    {
+        for (int i = playerRedText.text.Length; i < blanks[currentBlank] - currentChar; i++)
+        {
+            playerRedText.text += " ";
+        }
+        playerRedText.text += w;
     }
 }
