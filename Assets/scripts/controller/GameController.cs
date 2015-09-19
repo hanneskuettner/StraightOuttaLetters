@@ -2,10 +2,16 @@
 using System.Collections;
 
 public class GameController : MonoBehaviour {
-    
+
+    private SongtextDisplayer songTextDisplayer;
+
 	// Use this for initialization
 	void Start () {
         Song song = Song.Load("01-its-tricky");
+
+        songTextDisplayer = FindObjectOfType<SongtextDisplayer>();
+
+        songTextDisplayer.SetLines(song.lyrics.lines);
 	}
 	
 	// Update is called once per frame
@@ -15,6 +21,5 @@ public class GameController : MonoBehaviour {
 
     public void StartGame()
     {
-
     }
 }

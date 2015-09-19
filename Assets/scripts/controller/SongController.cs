@@ -3,8 +3,8 @@ using System.Collections;
 
 public class SongController : MonoBehaviour {
 
-    public AudioSource sourceBattle;
-    public AudioSource sourceBeat;
+    private AudioSource sourceBattle;
+    private AudioSource sourceBeat;
 
     public float CurrentTime { get { return sourceBattle != null ? sourceBattle.time : 0.0f; } }
 
