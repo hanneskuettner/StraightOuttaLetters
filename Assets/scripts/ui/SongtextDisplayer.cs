@@ -25,7 +25,7 @@ public class SongtextDisplayer : MonoBehaviour {
         {
             currentTime = audioSource.time / 60;
             currentBars = CalculateCurrentBar(currentTime);
-            if (currentBars % 2 == 0)
+            if (currentBars - 1 % 2 == 0)
                 OnBarsDone();
         }
 	}
@@ -42,5 +42,10 @@ public class SongtextDisplayer : MonoBehaviour {
             text.text = songLines[CurrentLine] + "\n" + songLines[CurrentLine + 1];
         else
             text.text = songLines[CurrentLine - 1] + "\n" + songLines[CurrentLine];
+    }
+
+    public string MakeLine(int start, int end, string replacement, string line) { 
+        var tmp = line.Substring(start, end - start);
+        return line.Replace(tmp, replacement);
     }
 }
