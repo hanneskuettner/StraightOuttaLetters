@@ -20,6 +20,19 @@ public class SongLyrics {
         [XmlArrayItem("player", Type = typeof(Player))]
         [XmlArrayItem("opponent", Type = typeof(Oppenent))]
         public List<Lyric> lyrics;
+
+        public int Length
+        {
+            get
+            {
+                int length = 0;
+                foreach (Lyric l in lyrics)
+                {
+                    length += l.lyric.Length + 1;
+                }
+                return length;
+            }
+        }
     }
 
     [XmlArray("lines"), XmlArrayItem("line")]

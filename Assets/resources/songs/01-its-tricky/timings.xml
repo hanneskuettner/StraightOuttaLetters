@@ -1,6 +1,20 @@
-<song>
-	<times>
-		<time>1.2</time>
-		<time>1.4</time>
-	</times>
+<?xml version="1.0" encoding="Windows-1252"?>
+<song xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <length>0</length>
+  <times>
+    <time>2.453</time>
+    <time>4.017</time>
+    <time>5.894</time>
+    <time>7.061</time>
+    <time>8.063</time>
+    <time>9.621</time>
+    <time>10.474</time>
+    <time>11.733</time>
+    <time>12.65</time>
+    <time>13.653</time>
+    <time>15.146</time>
+    <time>17.429</time>
+    <time>18.431</time>
+    <time>19.306</time>
+  </times>
 </song>

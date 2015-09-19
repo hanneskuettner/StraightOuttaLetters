@@ -16,7 +16,7 @@ public class WordDictionary {
     }
 
     [XmlArray("words"), XmlArrayItem("word")]
-    List<Word> words;
+    public List<Word> words;
 
     private string filename;
 
