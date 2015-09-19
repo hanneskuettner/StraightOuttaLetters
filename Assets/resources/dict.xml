@@ -1,9 +1,185 @@
 <dict>
 	<words>
-		<word original="This">
+		<word original="a">
 			<alts>
-				<alt>Piss</alt>
-				<alt>Kiss</alt>
+				<alt>e</alt>
+				<alt>i</alt>
+				<alt>o</alt>
+			</alts>
+		</word>
+		<word original="b">
+			<alts>
+				<alt>p</alt>
+				<alt>d</alt>
+				<alt>l</alt>
+			</alts>
+		</word>
+		<word original="c">
+			<alts>
+				<alt>z</alt>
+				<alt>g</alt>
+				<alt>j</alt>
+			</alts>
+		</word>
+		<word original="d">
+			<alts>
+				<alt>t</alt>
+				<alt>r</alt>
+				<alt>g</alt>
+			</alts>
+		</word>
+		<word original="e">
+			<alts>
+				<alt>a</alt>
+				<alt>i</alt>
+				<alt>d</alt>
+			</alts>
+		</word>
+		<word original="f">
+			<alts>
+				<alt>h</alt>
+				<alt>v</alt>
+				<alt>w</alt>
+			</alts>
+		</word>
+		<word original="g">
+			<alts>
+				<alt>j</alt>
+				<alt>k</alt>
+				<alt>r</alt>
+			</alts>
+		</word>
+		<word original="h">
+			<alts>
+				<alt>s</alt>
+				<alt>x</alt>
+				<alt>o</alt>
+			</alts>
+		</word>
+		<word original="i">
+			<alts>
+				<alt>y</alt>
+				<alt>k</alt>
+				<alt>u</alt>
+			</alts>
+		</word>
+		<word original="j">
+			<alts>
+				<alt>b</alt>
+				<alt>k</alt>
+				<alt>q</alt>
+			</alts>
+		</word>
+		<word original="k">
+			<alts>
+				<alt>t</alt>
+				<alt>j</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="l">
+			<alts>
+				<alt>f</alt>
+				<alt>m</alt>
+				<alt>n</alt>
+			</alts>
+		</word>
+		<word original="m">
+			<alts>
+				<alt>n</alt>
+				<alt>q</alt>
+				<alt>l</alt>
+			</alts>
+		</word>
+		<word original="n">
+			<alts>
+				<alt>l</alt>
+				<alt>t</alt>
+				<alt>m</alt>
+			</alts>
+		</word>
+		<word original="o">
+			<alts>
+				<alt>u</alt>
+				<alt>e</alt>
+				<alt>a</alt>
+			</alts>
+		</word>
+		<word original="p">
+			<alts>
+				<alt>h</alt>
+				<alt>c</alt>
+				<alt>g</alt>
+			</alts>
+		</word>
+		<word original="q">
+			<alts>
+				<alt>p</alt>
+				<alt>k</alt>
+				<alt>u</alt>
+			</alts>
+		</word>
+		<word original="r">
+			<alts>
+				<alt>a</alt>
+				<alt>e</alt>
+				<alt>h</alt>
+			</alts>
+		</word>
+		<word original="s">
+			<alts>
+				<alt>c</alt>
+				<alt>z</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="t">
+			<alts>
+				<alt>w</alt>
+				<alt>q</alt>
+				<alt>p</alt>
+			</alts>
+		</word>
+		<word original="u">
+			<alts>
+				<alt>a</alt>
+				<alt>o</alt>
+				<alt>i</alt>
+			</alts>
+		</word>
+		<word original="v">
+			<alts>
+				<alt>y</alt>
+				<alt>w</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="w">
+			<alts>
+				<alt>z</alt>
+				<alt>v</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="x">
+			<alts>
+				<alt>s</alt>
+				<alt>c</alt>
+				<alt>k</alt>
+			</alts>
+		</word>
+		<word original="y">
+			<alts>
+				<alt>i</alt>
+				<alt>p</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="z">
+			<alts>
+				<alt>c</alt>
+				<alt>x</alt>
+				<alt>d</alt>
 			</alts>
 		</word>
 	</words>

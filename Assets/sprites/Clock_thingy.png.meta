@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 1c614c56637e9564185c7c3d338baf65
-timeCreated: 1442690786
-=======
-guid: 2c36e2c0a9787624393a575f22b6952d
-timeCreated: 1442690268
->>>>>>> 55f9c4ff902957b6c6cce8b5d653178f4b6536e4
+guid: d15b37fb29e6fe046aabdda82ae92592
+timeCreated: 1442692978
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName: {}
@@ -35,11 +30,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-<<<<<<< HEAD
     aniso: -1
-=======
-    aniso: 16
->>>>>>> 55f9c4ff902957b6c6cce8b5d653178f4b6536e4
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0

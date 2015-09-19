@@ -24,41 +24,80 @@ public class UIFlow : MonoBehaviour {
 	
 	}
 
-    public void increasePlayerFlow()
+    public void IncreasePlayerFlow()
     {
         this.playerFlowLevel = Mathf.Min(this.playerFlowLevel + 1, this.flowLevels.Length - 1);
 
-        this.PlayerFlow.text = this.getFlowText(this.playerFlowLevel);
+        this.paintPlayer();
     }
 
-    public void increaseEnemyFlow()
+    public void IncreaseEnemyFlow()
     {
         this.enemyFlowLevel = Mathf.Min(this.enemyFlowLevel + 1, this.flowLevels.Length - 1);
 
-        this.EnemyFlow.text = this.getFlowText(this.enemyFlowLevel);
+        this.paintEnemy();
     }
 
-    public void resetPlayerFlow() {
+
+    public void DecreasePlayerFlow()
+    {
+        this.playerFlowLevel = Mathf.Max(this.playerFlowLevel - 1, 0);
+
+        this.paintPlayer();
+    }
+
+    public void DecreaseEnemyFlow()
+    {
+        this.enemyFlowLevel = Mathf.Max(this.playerFlowLevel - 1, 0);
+
+        this.paintEnemy();
+    }
+
+
+    public void ResetPlayerFlow() {
         this.playerFlowLevel = 0;
+
+        this.paintPlayer();
     }
 
-    public void resetEnemyFlow()
+    public void ResetEnemyFlow()
     {
         this.enemyFlowLevel = 0;
+
+        this.paintEnemy();
     }
 
-    public int getPlayerMultiplier()
+
+
+
+    public int GetPlayerMultiplier()
     {
         return this.flowLevels[this.playerFlowLevel];
     }
 
-    public int getEnemyMultiplier()
+    public int GetEnemyMultiplier()
     {
         return this.flowLevels[this.enemyFlowLevel];
     }
 
+
+
+
+
+
+
     private string getFlowText(int level)
     {
         return this.textPrefix + this.flowLevels[level].ToString();
+    }
+
+    private void paintPlayer()
+    {
+        this.PlayerFlow.text = this.getFlowText(this.playerFlowLevel);
+    }
+
+    private void paintEnemy()
+    {
+        this.EnemyFlow.text = this.getFlowText(this.enemyFlowLevel);
     }
 }
