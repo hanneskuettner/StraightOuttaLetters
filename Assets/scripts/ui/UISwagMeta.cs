@@ -40,14 +40,14 @@ public class UISwagMeta : MonoBehaviour {
             if (Random.Range(0,2) == 0)
             {
                 this.AddPlayerScore(Random.Range(10f, 200f));
-                Debug.Log("player score");
+                //Debug.Log("player score");
             }
             else
             {
                 this.AddEnemyScore(Random.Range(10f, 200f));
-                Debug.Log("enemy score");
+                //Debug.Log("enemy score");
             }
-            Debug.Log("p " + this.playerScore + "      e " + this.enemyScore);
+            //Debug.Log("p " + this.playerScore + "      e " + this.enemyScore);
         }
 
 

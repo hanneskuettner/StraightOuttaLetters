@@ -51,9 +51,135 @@
 		</word>
 		<word original="h">
 			<alts>
+				<alt>s</alt>
+				<alt>x</alt>
+				<alt>o</alt>
+			</alts>
+		</word>
+		<word original="i">
+			<alts>
+				<alt>y</alt>
+				<alt>k</alt>
+				<alt>u</alt>
+			</alts>
+		</word>
+		<word original="j">
+			<alts>
+				<alt>b</alt>
+				<alt>k</alt>
+				<alt>q</alt>
+			</alts>
+		</word>
+		<word original="k">
+			<alts>
 				<alt>t</alt>
+				<alt>j</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="l">
+			<alts>
+				<alt>f</alt>
+				<alt>m</alt>
+				<alt>n</alt>
+			</alts>
+		</word>
+		<word original="m">
+			<alts>
+				<alt>y</alt>
 				<alt>p</alt>
 				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="n">
+			<alts>
+				<alt>y</alt>
+				<alt>p</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="o">
+			<alts>
+				<alt>y</alt>
+				<alt>e</alt>
+				<alt>a</alt>
+			</alts>
+		</word>
+		<word original="p">
+			<alts>
+				<alt>y</alt>
+				<alt>p</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="q">
+			<alts>
+				<alt>y</alt>
+				<alt>p</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="r">
+			<alts>
+				<alt>y</alt>
+				<alt>p</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="s">
+			<alts>
+				<alt>c</alt>
+				<alt>z</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="t">
+			<alts>
+				<alt>y</alt>
+				<alt>p</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="u">
+			<alts>
+				<alt>y</alt>
+				<alt>o</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="v">
+			<alts>
+				<alt>y</alt>
+				<alt>w</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="w">
+			<alts>
+				<alt>y</alt>
+				<alt>v</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="x">
+			<alts>
+				<alt>s</alt>
+				<alt>c</alt>
+				<alt>k</alt>
+			</alts>
+		</word>
+		<word original="y">
+			<alts>
+				<alt>i</alt>
+				<alt>p</alt>
+				<alt>b</alt>
+			</alts>
+		</word>
+		<word original="z">
+			<alts>
+				<alt>c</alt>
+				<alt>x</alt>
+				<alt>d</alt>
 			</alts>
 		</word>
 	</words>
