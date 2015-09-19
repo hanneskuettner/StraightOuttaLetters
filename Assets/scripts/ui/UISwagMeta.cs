@@ -19,7 +19,6 @@ public class UISwagMeta : MonoBehaviour {
     }
 
     private float width;
-    private float tick = 0f;
 
     private float deleteme = 2f;
 
@@ -29,9 +28,6 @@ public class UISwagMeta : MonoBehaviour {
     {
         // get width of container
         width = ((RectTransform)this.transform).rect.width;
-
-        //this.playerImage.rectTransform.offsetMax = new Vector2(-300f , this.playerImage.rectTransform.offsetMax.y);
-        //this.enemyImage.rectTransform.offsetMin = new Vector2(100f, this.enemyImage.rectTransform.offsetMin.y);
     }
 
     // Update is called once per frame
@@ -40,7 +36,7 @@ public class UISwagMeta : MonoBehaviour {
         this.deleteme -= Time.deltaTime;
         if (this.deleteme < 0f)
         {
-            this.deleteme = 2f;
+            this.deleteme = 5f;
             if (Random.Range(0,2) == 0)
             {
                 this.AddPlayerScore(Random.Range(10f, 200f));
@@ -51,20 +47,11 @@ public class UISwagMeta : MonoBehaviour {
                 this.AddEnemyScore(Random.Range(10f, 200f));
                 Debug.Log("enemy score");
             }
+            Debug.Log("p " + this.playerScore + "      e " + this.enemyScore);
         }
 
 
-
-
-        this.tick -= Time.deltaTime;
-        if (this.tick <= 0f)
-        {
-            this.tick = 0.1f;
-            this.updatePlayerScore();
-            this.updateEnemyScore();
-
-            this.updateScores();
-        }
+        this.updateScores();
     }
 
 
@@ -90,58 +77,40 @@ public class UISwagMeta : MonoBehaviour {
 
     private void updateScores()
     {
-        Debug.Log("update scores");
         float playerSize = this.width / 2f;
         float enemySize = playerSize;
         float totalScore = this.playerScore + this.enemyScore;
 
         if (totalScore > 0f)
         {
-            this.targetPlayerSize = -400f + (this.playerScore / totalScore) * this.width;
+            this.targetPlayerSize = (this.enemyScore / totalScore) * this.width;
 
             float diff = this.currentPlayerSize - this.targetPlayerSize;
+            //Debug.Log(this.targetPlayerSize + " " + this.playerImage.rectTransform.rect.xMax + "    diff " + diff);
             if (Mathf.Abs(diff) > 20f)
             {
-                this.currentPlayerSize -= diff * 0.5f;
+                this.currentPlayerSize -= diff * 2f * Time.deltaTime;
             }
             else
             {
-                this.currentPlayerSize -= diff * 0.5f;
+                if (Mathf.Abs(diff) > 1f)
+                {
+                    this.currentPlayerSize -= Mathf.Sign(diff) * 20f * Time.deltaTime;
+                }
+                else
+                {
+                    this.currentPlayerSize = this.targetPlayerSize;
+                }
             }
+
             playerSize = this.currentPlayerSize;
-            enemySize = -400f - playerSize;
+            enemySize = this.currentEnemySize;
         }
         
         // set RIGHT
-        this.playerImage.rectTransform.offsetMax = new Vector2(playerSize, this.playerImage.rectTransform.offsetMax.y);
+        this.playerImage.rectTransform.offsetMax = new Vector2(-playerSize, this.playerImage.rectTransform.offsetMax.y);
 
         // set LEFT
         this.enemyImage.rectTransform.offsetMin = new Vector2(enemySize, this.enemyImage.rectTransform.offsetMin.y);
-    }
-
-    private void updatePlayerScore()
-    {
-        /*if (this.playerScoreToAdd != 0f)
-        {
-            float val;
-            if (this.playerScoreToAdd > 20f)
-            {
-                val = this.playerScoreToAdd * 0.5f;
-            }
-            else
-            {
-                val = 5f;
-            }
-            
-            this.playerScoreToAdd -= val;
-            this.playerScore += val;
-        }*/
-    }
-
-    private void updateEnemyScore()
-    {
-        /*if (this.enemyScoreToAdd != 0f)
-        {
-        }*/
     }
 }
