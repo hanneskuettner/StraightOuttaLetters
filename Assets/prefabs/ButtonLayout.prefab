@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11480816}
   m_Layer: 5
   m_Name: ButtonLayout
-  m_TagString: Untagged
+  m_TagString: ButtonLayout
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: ButtonLayout
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 128676}
