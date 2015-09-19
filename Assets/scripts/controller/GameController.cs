@@ -22,4 +22,8 @@ public class GameController : MonoBehaviour {
     public void StartGame()
     {
     }
+
+    public void PutWord(string word) { 
+        //TODO: Logic
+    }
 }
