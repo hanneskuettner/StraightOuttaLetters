@@ -55,4 +55,14 @@ public class WordDictionary {
 		    stream.Dispose();
 	    }
     }
+
+    public List<string> Lookup(string word)
+    {
+        foreach (Word w in words)
+        {
+            if (w.original == word)
+                return w.alts;
+        }
+        return null;
+    }
 }
