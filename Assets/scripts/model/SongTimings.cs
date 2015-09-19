@@ -18,8 +18,9 @@ public class SongTimings {
 
     public static SongTimings Load(string name)
     {
-        TextAsset textFile = (TextAsset)Resources.Load("songs/" + name + "/timings.xml");
-
+        Debug.Log("songs/" + name + "/timings.xml");
+        TextAsset textFile = (TextAsset)Resources.Load("songs/" + name + "/timings");
+        Debug.Log(textFile);
         StringReader reader = new StringReader(textFile.text);
 
         XmlSerializer serializer = new XmlSerializer(typeof(SongTimings));
@@ -32,7 +33,7 @@ public class SongTimings {
 
     public void Save()
     {
-        XmlSerializer serializer = new XmlSerializer(typeof(WordDictionary));
+        XmlSerializer serializer = new XmlSerializer(typeof(SongTimings));
 
         FileStream stream = new FileStream("Assets/resources/songs/" + this.name + "/timings.xml", FileMode.OpenOrCreate);
 
