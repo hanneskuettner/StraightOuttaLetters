@@ -145,4 +145,8 @@ public class GameController : MonoBehaviour {
 
 
     }
+
+    public void PutWord(string word) { 
+        //TODO: Logic
+    }
 }
