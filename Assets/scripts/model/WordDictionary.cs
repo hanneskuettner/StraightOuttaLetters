@@ -37,7 +37,7 @@ public class WordDictionary {
     public void Save() {
 	    XmlSerializer serializer = new XmlSerializer (typeof(WordDictionary));
 
-	    FileStream stream = new FileStream ("Assets/Resources/" + this.filename + ".xml", FileMode.OpenOrCreate);
+	    FileStream stream = new FileStream ("Assets/resources/" + this.filename + ".xml", FileMode.OpenOrCreate);
 
 	    words.Sort();
 	    foreach (Word w in words) {
@@ -54,5 +54,15 @@ public class WordDictionary {
 		    stream.Close();
 		    stream.Dispose();
 	    }
+    }
+
+    public List<string> Lookup(string word)
+    {
+        foreach (Word w in words)
+        {
+            if (w.original == word)
+                return w.alts;
+        }
+        return null;
     }
 }
