@@ -1,8 +1,12 @@
 fileFormatVersion: 2
-guid: 1a84b407f8498f3478385c1661a15aaa
+guid: 1e443b725f122114f975c05de53c2316
 timeCreated: 1442630416
 licenseType: Pro
-NativeFormatImporter:
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -15,7 +15,7 @@ public class SongLyrics {
 
         XmlSerializer serializer = new XmlSerializer(typeof(SongLyrics));
         SongLyrics lyrics = serializer.Deserialize(reader) as SongLyrics;
-        
-        return song;
+
+        return lyrics;
     }
 }

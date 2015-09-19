@@ -8,7 +8,7 @@ using System.IO;
 [XmlRoot("song")]
 public class SongTimings {
 
-    public string name;
+    public string Name;
     public float length;
 
     [XmlArray("times"), XmlArrayItem("time")]
@@ -25,7 +25,7 @@ public class SongTimings {
         XmlSerializer serializer = new XmlSerializer(typeof(SongTimings));
         SongTimings song = serializer.Deserialize(reader) as SongTimings;
 
-        song.name = name;
+        song.Name = name;
 
         return song;
     }
