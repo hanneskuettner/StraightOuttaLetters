@@ -86,44 +86,44 @@
 		</word>
 		<word original="m">
 			<alts>
-				<alt>y</alt>
-				<alt>p</alt>
-				<alt>b</alt>
+				<alt>n</alt>
+				<alt>q</alt>
+				<alt>l</alt>
 			</alts>
 		</word>
 		<word original="n">
 			<alts>
-				<alt>y</alt>
-				<alt>p</alt>
-				<alt>b</alt>
+				<alt>l</alt>
+				<alt>t</alt>
+				<alt>m</alt>
 			</alts>
 		</word>
 		<word original="o">
 			<alts>
-				<alt>y</alt>
+				<alt>u</alt>
 				<alt>e</alt>
 				<alt>a</alt>
 			</alts>
 		</word>
 		<word original="p">
 			<alts>
-				<alt>y</alt>
-				<alt>p</alt>
-				<alt>b</alt>
+				<alt>h</alt>
+				<alt>c</alt>
+				<alt>g</alt>
 			</alts>
 		</word>
 		<word original="q">
 			<alts>
-				<alt>y</alt>
 				<alt>p</alt>
-				<alt>b</alt>
+				<alt>k</alt>
+				<alt>u</alt>
 			</alts>
 		</word>
 		<word original="r">
 			<alts>
-				<alt>y</alt>
-				<alt>p</alt>
-				<alt>b</alt>
+				<alt>a</alt>
+				<alt>e</alt>
+				<alt>h</alt>
 			</alts>
 		</word>
 		<word original="s">
@@ -135,16 +135,16 @@
 		</word>
 		<word original="t">
 			<alts>
-				<alt>y</alt>
+				<alt>w</alt>
+				<alt>q</alt>
 				<alt>p</alt>
-				<alt>b</alt>
 			</alts>
 		</word>
 		<word original="u">
 			<alts>
-				<alt>y</alt>
+				<alt>a</alt>
 				<alt>o</alt>
-				<alt>b</alt>
+				<alt>i</alt>
 			</alts>
 		</word>
 		<word original="v">
@@ -156,7 +156,7 @@
 		</word>
 		<word original="w">
 			<alts>
-				<alt>y</alt>
+				<alt>z</alt>
 				<alt>v</alt>
 				<alt>b</alt>
 			</alts>
