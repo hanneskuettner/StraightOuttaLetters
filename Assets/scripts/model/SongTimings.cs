@@ -14,18 +14,18 @@ public class SongTimings {
     [XmlArray("times"), XmlArrayItem("time")]
     List<float> times;
 
-    private string filename;
+    private string name;
 
-    public static SongTimings Load(string filename)
+    public static SongTimings Load(string name)
     {
-        TextAsset textFile = (TextAsset)Resources.Load("songs/" + filename);
+        TextAsset textFile = (TextAsset)Resources.Load("songs/" + name + "/timings.xml");
 
         StringReader reader = new StringReader(textFile.text);
 
         XmlSerializer serializer = new XmlSerializer(typeof(SongTimings));
         SongTimings song = serializer.Deserialize(reader) as SongTimings;
 
-        song.filename = filename;
+        song.name = name;
 
         return song;
     }
@@ -34,7 +34,7 @@ public class SongTimings {
     {
         XmlSerializer serializer = new XmlSerializer(typeof(WordDictionary));
 
-        FileStream stream = new FileStream("Assets/resources/songs/" + this.filename + ".xml", FileMode.OpenOrCreate);
+        FileStream stream = new FileStream("Assets/resources/songs/" + this.name + "/timings.xml", FileMode.OpenOrCreate);
 
         times.Sort();
 
