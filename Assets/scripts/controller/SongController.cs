@@ -22,10 +22,14 @@ public class SongController : MonoBehaviour {
         currentSong = song;
     }
 
-	// Use this for initialization
-	void Start () {
+    void Awake()
+    {
         sourceBattle = GameObject.Find("BattleSource").GetComponent<AudioSource>();
         sourceBeat = GameObject.Find("BeatSource").GetComponent<AudioSource>();
+    }
+
+	// Use this for initialization
+	void Start () {
 	}
 	
 	// Update is called once per frame

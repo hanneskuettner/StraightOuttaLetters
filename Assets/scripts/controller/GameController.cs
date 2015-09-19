@@ -138,7 +138,7 @@ public class GameController : MonoBehaviour {
                 {
                     List<int> b = new List<int>();
                     List<int> r = new List<int>();
-                    int count = (int)(Random.Range(0, lyric.lyric.Length) / 2f);
+                    int count = (int)(Random.Range(0, lyric.lyric.Length) / 3f);
                     for (int i = 0; i < count; i++)
                     {
                         r.Add(Random.Range(0, lyric.lyric.Length));

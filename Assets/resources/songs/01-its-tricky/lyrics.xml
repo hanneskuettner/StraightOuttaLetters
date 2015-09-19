@@ -22,10 +22,18 @@
 		<line><parts><player>I had to leave real early</player></parts></line>
 		<line><parts><opponent>These girls are really sleazy,</opponent></parts></line>
 		<line><parts><opponent>all they just say is please me</opponent></parts></line>
-		<line><parts><opponent>Or spend some time and rock a rhyme, I said "It's not that easy"</opponent></parts></line>
-		<line><parts><player>It's Tricky to rock a rhyme, to rock a rhyme that's right on time</player></parts></line>
-		<line><parts><opponent>It's tricky</opponent><player>How is it D?</player><opponent>It's tricky</opponent><player>Tricky</player><opponent>tricky</opponent><player>Tricky</player></parts></line>
-		<line><parts><player>It's tricky to rock a rhyme, to rock a rhyme that's right on time</player></parts></line>
-		<line><parts><opponent>It's</opponent><player>tricky</player><opponent>tricky</opponent><player>Tricky</player><opponent>tricky huh!</opponent></parts></line>
+		<line><parts><opponent>Or spend some time and rock a rhyme,</opponent></parts></line>
+		<line><parts><opponent>I said "It's not that easy"</opponent></parts></line>
+		<line><parts><player>It's Tricky to rock a rhyme,</player></parts></line>
+		<line><parts><player>to rock a rhyme</player></parts></line>
+		<line><parts><player>that's right on time</player></parts></line>
+		<line><parts><opponent>It's tricky</opponent><player>How is it D?</player></parts></line>
+		<line><parts><opponent>It's tricky</opponent></parts></line>
+		<line><parts><player>Tricky</player><opponent>tricky</opponent><player>Tricky</player></parts></line>
+		<line><parts><player>It's Tricky to rock a rhyme,</player></parts></line>
+		<line><parts><player>to rock a rhyme</player></parts></line>
+		<line><parts><player>that's right on time</player></parts></line>
+		<line><parts><opponent>It's</opponent><player>tricky</player></parts></line>
+		<line><parts><opponent>tricky</opponent><player>Tricky</player><opponent>tricky huh!</opponent></parts></line>
 	</lines>
 </lyrics>

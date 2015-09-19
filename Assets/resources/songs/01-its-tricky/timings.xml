@@ -2,19 +2,39 @@
 <song xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <length>0</length>
   <times>
-    <time>2.453</time>
-    <time>4.017</time>
-    <time>5.894</time>
-    <time>7.061</time>
-    <time>8.063</time>
-    <time>9.621</time>
-    <time>10.474</time>
-    <time>11.733</time>
-    <time>12.65</time>
-    <time>13.653</time>
-    <time>15.146</time>
-    <time>17.429</time>
-    <time>18.431</time>
-    <time>19.306</time>
+    <time>2.474</time>
+    <time>4.209</time>
+    <time>6.065</time>
+    <time>7.025</time>
+    <time>8.006</time>
+    <time>9.329</time>
+    <time>10.033</time>
+    <time>11.569</time>
+    <time>12.614</time>
+    <time>13.553</time>
+    <time>16.497</time>
+    <time>17.414</time>
+    <time>19.078</time>
+    <time>20.059</time>
+    <time>21.147</time>
+    <time>23.43</time>
+    <time>24.902</time>
+    <time>26.545</time>
+    <time>28.693</time>
+    <time>30.513</time>
+    <time>32.39</time>
+    <time>34.225</time>
+    <time>36.123</time>
+    <time>37.979</time>
+    <time>39.963</time>
+    <time>41.755</time>
+    <time>42.737</time>
+    <time>43.761</time>
+    <time>45.553</time>
+    <time>46.534</time>
+    <time>47.878</time>
+    <time>49.265</time>
+    <time>50.182</time>
+    <time>51.227</time>
   </times>
 </song>
