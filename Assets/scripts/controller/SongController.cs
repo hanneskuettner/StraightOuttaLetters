@@ -8,8 +8,12 @@ public class SongController : MonoBehaviour {
 
     public float CurrentTime { get { return sourceBattle != null ? sourceBattle.time : 0.0f; } }
 
-    public Song currentSong;
+    public Song currentSong { get; set; }
 
+    public void SetCurrentSong(Song song) {
+        StopAudio();
+        currentSong = song;
+    }
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +38,11 @@ public class SongController : MonoBehaviour {
         sourceBattle.mute = false;
         sourceBeat.Play();
         sourceBattle.Play();
+    }
+
+    public void StopAudio() {
+        sourceBattle.Stop();
+        sourceBeat.Stop();
     }
 
     public void ChangeAudioHearable() {
