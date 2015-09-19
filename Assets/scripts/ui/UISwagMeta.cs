@@ -6,9 +6,17 @@ public class UISwagMeta : MonoBehaviour {
     public UnityEngine.UI.Image enemyImage;
 
     private float playerScore = 0f;
-    private float playerScoreToAdd = 0f;
     private float enemyScore = 0f;
-    private float enemyScoreToAdd = 0f;
+
+    private float currentPlayerSize = 200f;
+    private float targetPlayerSize = 0f;
+    private float currentEnemySize
+    {
+        get
+        {
+            return 400f - this.currentPlayerSize;
+        }
+    }
 
     private float width;
     private float tick = 0f;
@@ -33,13 +41,15 @@ public class UISwagMeta : MonoBehaviour {
         if (this.deleteme < 0f)
         {
             this.deleteme = 2f;
-            if (Random.Range(0,1) == 0)
+            if (Random.Range(0,2) == 0)
             {
                 this.AddPlayerScore(Random.Range(10f, 200f));
+                Debug.Log("player score");
             }
             else
             {
                 this.AddEnemyScore(Random.Range(10f, 200f));
+                Debug.Log("enemy score");
             }
         }
 
@@ -49,11 +59,11 @@ public class UISwagMeta : MonoBehaviour {
         this.tick -= Time.deltaTime;
         if (this.tick <= 0f)
         {
-            this.tick = 0.2f;
+            this.tick = 0.1f;
             this.updatePlayerScore();
             this.updateEnemyScore();
 
-            //this.updateScores();
+            this.updateScores();
         }
     }
 
@@ -65,7 +75,7 @@ public class UISwagMeta : MonoBehaviour {
     /// <param name="val">Might be negative</param>
     public void AddPlayerScore(float val)
     {
-        playerScoreToAdd += val;
+        playerScore += val;
     }
 
     /// <summary>
@@ -74,32 +84,44 @@ public class UISwagMeta : MonoBehaviour {
     /// <param name="val">Might be negative</param>
     public void AddEnemyScore(float val)
     {
-        enemyScoreToAdd += val;
+        enemyScore += val;
     }
 
 
     private void updateScores()
     {
+        Debug.Log("update scores");
         float playerSize = this.width / 2f;
         float enemySize = playerSize;
         float totalScore = this.playerScore + this.enemyScore;
 
         if (totalScore > 0f)
         {
-            playerSize = -400f + (this.playerScore / totalScore) * this.width;
-            enemySize = (this.enemyScore / totalScore) * this.width;
-        }
+            this.targetPlayerSize = -400f + (this.playerScore / totalScore) * this.width;
 
+            float diff = this.currentPlayerSize - this.targetPlayerSize;
+            if (Mathf.Abs(diff) > 20f)
+            {
+                this.currentPlayerSize -= diff * 0.5f;
+            }
+            else
+            {
+                this.currentPlayerSize -= diff * 0.5f;
+            }
+            playerSize = this.currentPlayerSize;
+            enemySize = -400f - playerSize;
+        }
+        
         // set RIGHT
         this.playerImage.rectTransform.offsetMax = new Vector2(playerSize, this.playerImage.rectTransform.offsetMax.y);
 
-        // set left
+        // set LEFT
         this.enemyImage.rectTransform.offsetMin = new Vector2(enemySize, this.enemyImage.rectTransform.offsetMin.y);
     }
 
     private void updatePlayerScore()
     {
-        if (this.playerScoreToAdd != 0f)
+        /*if (this.playerScoreToAdd != 0f)
         {
             float val;
             if (this.playerScoreToAdd > 20f)
@@ -110,16 +132,16 @@ public class UISwagMeta : MonoBehaviour {
             {
                 val = 5f;
             }
-
+            
             this.playerScoreToAdd -= val;
             this.playerScore += val;
-        }
+        }*/
     }
 
     private void updateEnemyScore()
     {
-        if (this.enemyScoreToAdd != 0f)
+        /*if (this.enemyScoreToAdd != 0f)
         {
-        }
+        }*/
     }
 }
